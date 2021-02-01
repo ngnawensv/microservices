@@ -1,0 +1,26 @@
+#Server port specify
+server:
+  port: 8080
+
+#Routes configurations
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: r1
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/categories/**
+        - id: r2
+          uri: http://localhost:8082/
+          predicates:
+            - Path=/articles/**
+    discovery:
+      enabled: false
+
+#expose all the endpoints of actuator. By default actuator expose tree endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
