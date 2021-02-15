@@ -1,0 +1,20 @@
+<p></p>
+<div class=" container text-danger" *ngIf="errorMessage">
+    <h3>{{errorMessage}}</h3>
+</div>
+<table class="table" *ngIf="articles">
+    <tr>
+        <th>ID</th>
+        <th>NOM</th>
+        <th>PRIX ACHAT</th>
+        <th>PRIX VENTE</th>
+        <th>QUANTITE</th>
+    </tr>
+    <tr *ngFor="let a of articles">
+        <td>{{a.id}}</td>
+        <td>{{a.nom}}</td>
+        <td>{{a.prixAchat}}</td>
+        <td>{{a.prixVente}}</td>
+        <td>{{a.quantite}}</td>
+    </tr>
+</table>

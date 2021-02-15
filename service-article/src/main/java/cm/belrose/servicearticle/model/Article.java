@@ -1,6 +1,8 @@
 package cm.belrose.servicearticle.model;
 
 
+import cm.belrose.servicearticle.dto.Categorie;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
@@ -78,4 +80,14 @@ public class Article  implements Serializable {
         this.quantite = quantite;
     }
 
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", prixAchat=" + prixAchat +
+                ", prixVente=" + prixVente +
+                ", quantite=" + quantite +
+                '}';
+    }
 }

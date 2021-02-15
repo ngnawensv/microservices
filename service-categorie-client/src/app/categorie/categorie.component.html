@@ -1,0 +1,16 @@
+<p></p>
+<div class=" container text-danger" *ngIf="errorMessage">
+    <h3>{{errorMessage}}</h3>
+</div>
+<table class="table" *ngIf="categories">
+    <tr>
+        <th>ID</th>
+        <th>CODE</th>
+        <th>NOM</th>
+    </tr>
+    <tr *ngFor="let c of categories">
+        <td>{{c.id}}</td>
+        <td>{{c.code}}</td> 
+        <td>{{c.nom}}</td>                 
+    </tr>
+</table>

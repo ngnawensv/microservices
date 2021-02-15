@@ -33,6 +33,7 @@ public class Initializer implements CommandLineRunner {
     @Override
     @Transactional
     public void run(String... args) throws Exception {
+
         List<Article> articles = new ArrayList<>();
         Article article1 = new Article("nom_art1", 1000, 1500, 10);
         Article article2 = new Article("nom_art2", 500, 1000, 15);
